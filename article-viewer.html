@@ -166,7 +166,7 @@
     <script>
         // Grab the markdown file name from the URL query parameter (e.g., article-viewer.html?file=my-post.md)
         const urlParams = new URLSearchParams(window.location.search);
-        const mdFile = urlParams.get('Articles/penn.md') || 'default.md';
+        const mdFile = urlParams.get('file') || 'default.md';
 
         // Fetch and render the markdown file
         fetch(mdFile)
