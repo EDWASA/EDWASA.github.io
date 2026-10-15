@@ -141,6 +141,56 @@
         }
 
         a { color: var(--primary-color); }
+        
+        /* Footer Styles */
+        .site-footer {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        padding: 40px 20px 20px;
+        font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+        }
+
+        .footer-column {
+        flex: 1;
+        min-width: 250px;
+        }
+
+        .footer-column h3 {
+        color: #00adb5;
+        margin-top: 0;
+        }
+
+        .footer-column ul {
+        list-style: none;
+        padding: 0;
+        }
+
+        .footer-column a {
+        color: #cccccc;
+        text-decoration: none;
+        }
+
+        .content-wrapper {
+        display: flex;
+        gap: 30px;
+        }
+
+        .main-content {
+        flex: 3;
+        }
+
+        .sidebar-block {
+        flex: 1;
+        }
     </style>
 </head>
 <body>
@@ -150,9 +200,10 @@
             <a href="index.html" class="logo">EDWASA</a>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
                     <li><a href="proj.html">Projects</a></li>
                     <li><a href="essay.html">Essays</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cv.html">CV</a></li>
                 </ul>
                 <button id="theme-toggle" class="theme-toggle-btn">🌙 Dark</button>
             </div>
