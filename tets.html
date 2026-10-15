@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - EDWASA</title>
+    <link rel="icon" type="image/x-icon" href="logoV2.svg">
+    <!-- Include Marked.js for parsing Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <style>
+        /* Light Theme Color Variables */
+        :root {
+            --primary-color: #2563eb;
+            --text-color: #1f2937;
+            --bg-color: #f9fafb;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+            --muted-text: #6b7280;
+        }
+
+        /* Dark Theme Color Variables */
+        [data-theme="dark"] {
+            --primary-color: #60a5fa;
+            --text-color: #f3f4f6;
+            --bg-color: #111827;
+            --card-bg: #1f2937;
+            --border-color: #374151;
+            --muted-text: #9ca3af;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        header {
+            background: var(--card-bg);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .theme-toggle-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Markdown Content Styling inside the viewer */
+        #markdown-content h1, #markdown-content h2, #markdown-content h3 {
+            color: var(--text-color);
+            margin-top: 1.5em;
+        }
+
+        #markdown-content pre {
+            background: var(--bg-color);
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+        }
+
+        #markdown-content code {
+            font-family: monospace;
+            background: var(--bg-color);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        #markdown-content blockquote {
+            border-left: 4px solid var(--primary-color);
+            margin: 0;
+            padding-left: 1rem;
+            color: var(--muted-text);
+        }
+
+        #markdown-content img {
+            max-width: 100%;
+            border-radius: 6px;
+        }
+
+        a { color: var(--primary-color); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">EDWASA</a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="proj.html">Projects</a></li>
+                    <li><a href="essay.html">Essays</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle-btn">🌙 Dark</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="markdown-content">Loading article...</div>
+    </main>
+
+    <script>
+        // Grab the markdown file name from the URL query parameter (e.g., article-viewer.html?file=my-post.md)
+        const urlParams = new URLSearchParams(window.location.search);
+        const mdFile = urlParams.get('penn.md') || 'default.md';
+
+        // Fetch and render the markdown file
+        fetch(mdFile)
+            .then(response => {
+                if (!response.ok) throw new Error('Could not load markdown file.');
+                return response.text();
+            })
+            .then(text => {
+                document.getElementById('markdown-content').innerHTML = marked.parse(text);
+            })
+            .catch(error => {
+                document.getElementById('markdown-content').innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+            });
+
+        // Theme Toggle Script
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+
+        themeToggleBtn.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                themeToggleBtn.textContent = '🌙 Dark';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggleBtn.textContent = '☀️ Light';
+            }
+        });
+    </script>
+</body>
+</html>
