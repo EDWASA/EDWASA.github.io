@@ -191,6 +191,10 @@
         .sidebar-block {
         flex: 1;
         }
+
+        html {
+        scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
@@ -251,16 +255,32 @@
 
         // Fetch and render the markdown file
         fetch(mdFile)
-            .then(response => {
-                if (!response.ok) throw new Error('Could not load markdown file.');
-                return response.text();
-            })
-            .then(text => {
-                document.getElementById('markdown-content').innerHTML = marked.parse(text);
-            })
-            .catch(error => {
-                document.getElementById('markdown-content').innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+        .then(response => {
+            if (!response.ok) throw new Error('Could not load markdown file.');
+            return response.text();
+        })
+        .then(text => {
+            let htmlContent = marked.parse(text);
+        
+            // Create a temporary element to manipulate the parsed HTML
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = htmlContent;
+
+            // 2. Automatically generate IDs for all headings so Table of Contents links work!
+            tempDiv.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
+                const headingId = heading.textContent
+                    .toLowerCase()
+                    .replace(/[^\w\s-]/g, '') // remove special characters
+                    .trim()
+                    .replace(/\s+/g, '-');   // replace spaces with hyphens
+                heading.id = headingId;
             });
+
+            document.getElementById('markdown-content').innerHTML = tempDiv.innerHTML;
+        })
+        .catch(error => {
+            document.getElementById('markdown-content').innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+        });
 
         // Theme Toggle Script
         const themeToggleBtn = document.getElementById('theme-toggle');

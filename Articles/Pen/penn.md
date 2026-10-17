@@ -1,14 +1,12 @@
 # Index
 - [Introduction](#introduction)
 	- [The Idea](#the-idea)
-	- [Why are there no such pens?](# Why are there no such pens)
+	- [Why are there no such pens?](#Why-are-there-no-such-pens)
 - [Design Process](#design-process)
 # Introduction
 ## The idea
 I recently came across a mechanical pencil (%%attach picture and/or affiliate link%%) which had the button to extend the mine closer to the tip, in a place which was a lot more convenient to reach during writing.
 I am not personally a big Fan of mechanical pencils, but this design element resonated with me and I wanted a similar thing for a ball point pen. Sadly I have not been able to find any ballpoint pen with a similar design, thus I have decided to make my own.
-<img src="Articles/Pen/edu.jpeg>
-![My Description](https://edwasa.github.io/Articles/Pen/edu.jpeg)
 ## Why are there no such pens?
 The mechanical pencil has the unique feature of the user needing to "refill" the tip as it wears down, thus during extended sessions constant regriping is needed to refill the tip.
 This is not a problem when using ball point pens during long sessions, since once you have engaged the tip the user does not need to interact with the main mechanism until they are done.
