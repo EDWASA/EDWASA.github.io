@@ -1,15 +1,30 @@
-#EDWASA 
-%%lfaw = look for another word%%
+# Index
+- [Introduction](#introduction)
+	- [The Idea](#the-idea)
+	- [Why are there no such pens?](# Why are there no such pens)
+- [Design Process](#design-process)
 # Introduction
 ## The idea
-I recently came across a mechanical pencil (%%attach picture and/or affiliate link%%) which had the button to extend (%%lfaw%%) the mine closer to the tip, in a place which was way more ergonomic for operating the button during writing. Which is relevant in a mechanical pencil since you need to periodically extend your mine as it gets used.
-I am not personally a big Fan of mechanical pencils, since I prefer using ball point pens when writing on paper. But this design element resonated with me and I wanted a similar thing too. I have not been able to find any ballpoint pens with a similar interaction, thus I decided to make my own.
+I recently came across a mechanical pencil (%%attach picture and/or affiliate link%%) which had the button to extend the mine closer to the tip, in a place which was a lot more convenient to reach during writing.
+I am not personally a big Fan of mechanical pencils, but this design element resonated with me and I wanted a similar thing for a ball point pen. Sadly I have not been able to find any ballpoint pen with a similar design, thus I have decided to make my own.
+![[edu.jpeg]]
 ## Why are there no such pens?
 The mechanical pencil has the unique feature of the user needing to "refill" the tip as it wears down, thus during extended sessions constant regriping is needed to refill the tip.
 This is not a problem when using ball point pens during long sessions, since once you have engaged the tip the user does not need to interact with the main mechanism until they are done.
 So why should the manufacturer bother designing a whole new mechanism that will not significantly contribute to the user experience?
 This is why I think the main reason why there are no ball point pens with an ergonomic deployment mechanism. Although it is a reasonable explanation to not mass produce such a pen it will not stop me in my pursuit of having such a pen, because the idea brings me joy.
 # Design Process
+## Goals and Objectives
+Before doing any research or opening my CAD software I had to decide what were the goals of my product.
+After some thought and observation about my preferences and inspirations I decided upon the following 4 objectives sorted from most to least important to the project.
+### 1. Ergonomic and Retractable
+As stated in the introduction, this project was inspired by the desire to have an ergonomic deployment method for a retractable ball point pen.
+### 2. It should not roll away
+I do not enjoy when pens roll away from your control, especially when in a lecture hall where your writing surface is slightly inclined towards you. This can be achieved by making the body not fully cylindrical or by adding a clip.
+### 3. Clip or no clip?
+For my EDC pens I require them to have a clip by the way I store and carry them, so ideally I would add one. But this would add another component to be designed and more complexity.
+### 4. Screwdriver bit
+I saw on maker world a pen (%%link!%%) with exchangeable tips to allow for using a standard screwdriver bit in addition to the writing tip (This was actually the first inspiration for this project, because it made me realize that I could 3D-print any pen I could imagine). Having a screwdriver in a pen sounds just like the type of unnecessary but oddly specific feature I love.
 ## Research
 When doing some preliminary research into existing ball point deployment technologies I came across 3 main Mechanisms.
 ### 1. Clicky button
@@ -23,17 +38,6 @@ This mechanism does have the potential issue of retracting accidentally during u
 I ended up going with this option an I realized that my design accidentally fixes this problem, since having the pin close to your finger provides for a nice resting place for your finger when writing which if you have the right version (Left vs. Right handed) will prevent the mechanism from disengaging accidentally.
 ### Other options?
 I briefly considered implementing some more exotic (%%lfaw%%) joints and mechanisms like the Scott-Russel linkage, but quickly discarded it in favor for a quicker implementation that already works. Additionally I was already excited about the "wing" realization I had when considering the Bolt action mechanism.
-## Goals and Objectives
-Once I had locked down the mechanism for my first Iteration I had to decide what other goals my design should meet before turning my CAD software on.
-### 1. Ergonomic and Retractable
-As stated in the introduction, this project was inspired by the desire to have an ergonomic deployment method for a retractable ball point pen.
-### 2. It should not roll away
-I do not enjoy when pens roll away from your control, especially when in a lecture hall where your writing surface is slightly inclined towards you. This can be achieved by making the body not fully cylindrical or by adding a clip.
-### 3. Clip or no clip?
-For my EDC pens I require them to have a clip by the way I store and carry them, so ideally I would add one. But this would add another component to be designed and more complexity.
-I finally decided to add one because I recently watched the Craighill video about how wire pen clips work and why they are superior to other more common ones (%%link!%%). This type of clip aligned with the underlying core of this whole project which was to make a cool and unique pen and this clip mechanism looks simple enough to not suppose too much additional work (%%forshadowing?%%)
-### 4. Screwdriver bit
-I saw on maker world a pen (%%link!%%) with exchangeable tips to allow for using a standard screwdriver bit in addition to the writing tip (This was actually the first inspiration for this project, because it made me realize that I should 3D-print any pen I could imagine). Having a screwdriver in a pen sounds just like the type of unnecessary but oddly specific feature I love.
 # Version 1 (Sep. 2026)
 Version 1 of this pen was a success, there were many things to fix but enough positive ones for me to continue pursuing this idea. Some positive elements were unexpected and embraced in future iterations.
 ## The Tip
@@ -116,3 +120,4 @@ I will be uploading the files to printables and maker world in case you want to 
 	- Might be too much work --> Low ROI
 - The body of a pen is called the barrel
 - The but does also have a fancy name, but I do not remember it.
+- Add a linked index at the beggining
