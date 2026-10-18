@@ -1,72 +1,76 @@
 <style>
-/* Footer Style */
     .site-footer {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    padding: 40px 20px 20px;
-    font-family: Arial, sans-serif;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-    margin: 0 auto;
+        background-color: #1a1a1a;
+        color: #ffffff;
+        padding: 40px 20px 20px;
+        font-family: Arial, sans-serif;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .footer-container {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 40px;
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px;
     }
 
     .footer-column {
-    flex: 0 1 auto;
-    min-width: 180px;
+        flex: 0 1 220px;
     }
 
     .footer-column h3 {
-    color: #00adb5;
-    margin-top: 0;
+        color: #00adb5;
+        margin-top: 0;
     }
 
     .footer-column ul {
-    list-style: none;
-    padding: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 6px;
     }
 
     .footer-column a {
-    color: #cccccc;
-    text-decoration: none;
+        color: #cccccc;
+        text-decoration: none;
+    }
+
+    .footer-column a:hover {
+        color: #00adb5;
     }
 </style>
 
-<div class="site-footer">
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Column 1 -->
+        <div class="footer-column">
+            <h3>EDWASA</h3>
+            <p>Stay proactive.</p>
+            <img src="Media/logoV2.svg" alt="EDWASA Logo" style="width: 50px; margin-top: 10px;">
+        </div>
 
-    <!-- Column 1 -->
-    <div class="footer-column">
-        <h3>EDWASA</h3>
-        <p>Stay proactive.</p>
-        <img src="Media/logoV2.svg" alt="EDWASA Logo" style="width: 50px; margin-top: 10px;">
-    </div>
+        <!-- Column 2: Navigation Links -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="proj.html">Projects</a></li>
+                <li><a href="essay.html">Essays</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+        </div>
 
-    <!-- Column 2: Navigation Links -->
-    <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="proj.html">Projects</a></li>
-            <li><a href="essay.html">Essays</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="cv.html">CV</a></li>
-        </ul>
+        <!-- Column 3: Contact Information -->
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p><strong>Email:</strong> <a href="mailto:eduwagener@gmail.com">eduwagener@gmail.com</a></p>
+        </div>
     </div>
-
-    <!-- Column 3: Contact Information -->
-    <div class="footer-column">
-        <h3>Contact Us</h3>
-        <p><strong>Email:</strong> <a href="mailto:eduwagener@gmail.com">eduwagener@gmail.com</a></p>
-    </div>
-</div>
+</footer>
