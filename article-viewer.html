@@ -95,36 +95,7 @@
         <div id="markdown-content">Loading article...</div>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-container">
-    
-            <!-- Column 1: About / Company Info -->
-            <div class="footer-column">
-                <h3>EDWASA</h3>
-                <p>Stay proactive.</p>
-                <img src="Media/logoV2.svg" alt="EDWASA Logo" style="width: 50px; margin-top: 10px;">
-            </div>
-
-            <!-- Column 2: Navigation Links -->
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="proj.html">Projects</a></li>
-                    <li><a href="essay.html">Essays</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="cv.html">CV</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 3: Contact Information -->
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <p><strong>Email:</strong> <a href="mailto:eduwagener@gmail.com">eduwagener@gmail.com</a></p>
-            </div>
-        </div>
-    </footer>
-
+    <footer id="site-footer"></footer>
     <script>
         // Grab the markdown file name from the URL query parameter (e.g., article-viewer.html?file=my-post.md)
         const urlParams = new URLSearchParams(window.location.search);
@@ -157,24 +128,6 @@
         })
         .catch(error => {
             document.getElementById('markdown-content').innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
-        });
-
-        // Theme Toggle Script
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-
-        themeToggleBtn.addEventListener('click', () => {
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            if (isDark) {
-                document.documentElement.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'light');
-                themeToggleBtn.textContent = '🌙 Dark';
-            } else {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-                themeToggleBtn.textContent = '☀️ Light';
-            }
         });
     </script>
 </body>

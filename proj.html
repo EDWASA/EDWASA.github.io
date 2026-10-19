@@ -359,25 +359,22 @@
         }
     </style>
 </head>
-<body>
 
-    <!-- Header & Navigation -->
-    <header>
-        <nav>
-            <a href="index.html" class="logo">EDWASA</a>
-            <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="proj.html" class="active">Projects</a></li>
-                    <li><a href="essay.html">Essays</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="cv.html">CV</a></li>
-                </ul>
-                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
-                    <span id="theme-icon">🌙</span> <span id="theme-text">Dark</span>
-                </button>
-            </div>
-        </nav>
-    </header>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('site-header').innerHTML = data;
+        });
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('site-footer').innerHTML = data;
+        });
+</script>
+
+<body>
+    <header id="site-header"></header>
 
     <main>
         <!-- Page Header -->
@@ -421,37 +418,7 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-container">
-    
-            <!-- Column 1: About / Company Info -->
-            <div class="footer-column">
-                <h3>EDWASA</h3>
-                <p>Stay proactive.</p>
-                <img src="Media/logoV2.svg" alt="EDWASA Logo" style="width: 50px; margin-top: 10px;">
-            </div>
-
-            <!-- Column 2: Navigation Links -->
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="proj.html">Projects</a></li>
-                    <li><a href="essay.html">Essays</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="cv.html">CV</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 3: Contact Information -->
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <p><strong>Email:</strong> <a href="mailto:eduwagener@gmail.com">eduwagener@gmail.com</a></p>
-            </div>
-        </div>
-    </footer>
-
+    <footer id="site-footer"></footer>
 
     <!-- JavaScript Engine -->
     <script>
@@ -614,45 +581,6 @@
 
         // Initial render on load
         renderProjects();
-
-        /* ----------------------------------------------------
-         * 5. DARK / LIGHT MODE ENGINE
-         * ---------------------------------------------------- */
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const themeText = document.getElementById('theme-text');
-
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-            setTheme('dark');
-        } else {
-            setTheme('light');
-        }
-
-        themeToggleBtn.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            if (currentTheme === 'dark') {
-                setTheme('light');
-            } else {
-                setTheme('dark');
-            }
-        });
-
-        function setTheme(theme) {
-            if (theme === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                themeIcon.textContent = '☀️';
-                themeText.textContent = 'Light';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.documentElement.removeAttribute('data-theme');
-                themeIcon.textContent = '🌙';
-                themeText.textContent = 'Dark';
-                localStorage.setItem('theme', 'light');
-            }
-        }
     </script>
 </body>
 </html>

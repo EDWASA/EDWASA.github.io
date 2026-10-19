@@ -26,11 +26,7 @@
 <body>
 
     <!-- Header & Navigation -->
-    <header id="site-header">
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
-            <span id="theme-icon">🌙</span> <span id="theme-text">Dark</span>
-        </button>
-    </header>
+    <header id="site-header"></header>
 
     <main>
         <div>
@@ -42,50 +38,5 @@
 
         <!-- Footer -->
     <footer id="site-footer"></footer>
-
-    <!-- JavaScript for Dark Mode Toggle -->
-    <script>
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const themeText = document.getElementById('theme-text');
-
-        // Check if user has a previously saved theme preference
-        const savedTheme = localStorage.getItem('theme');
-        
-        // Check if the user's OS prefers dark mode
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-        // Apply saved preference or system default on initial load
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-            setTheme('dark');
-        } else {
-            setTheme('light');
-        }
-
-        // Handle button click
-        themeToggleBtn.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            if (currentTheme === 'dark') {
-                setTheme('light');
-            } else {
-                setTheme('dark');
-            }
-        });
-
-        // Function to update the page theme and storage
-        function setTheme(theme) {
-            if (theme === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                themeIcon.textContent = '☀️';
-                themeText.textContent = 'Light';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.documentElement.removeAttribute('data-theme');
-                themeIcon.textContent = '🌙';
-                themeText.textContent = 'Dark';
-                localStorage.setItem('theme', 'light');
-            }
-        }
-    </script>
 </body>
 </html>

@@ -1,25 +1,4 @@
 :root {
-    --primary-color: #2563eb;
-    --primary-hover: #1d4ed8;
-    --text-color: #1f2937;
-    --bg-color: #f9fafb;
-    --card-bg: #ffffff;
-    --border-color: #e5e7eb;
-    --muted-text: #6b7280;
-    
-    /* Status Badge Colors (Light Mode) */
-    --status-completed-bg: #dcfce7;
-    --status-completed-text: #15803d;
-    --status-inprogress-bg: #fef3c7;
-    --status-inprogress-text: #b45309;
-    --status-active-bg: #dbeafe;
-    --status-active-text: #1d4ed8;
-    --status-archived-bg: #f3f4f6;
-    --status-archived-text: #4b5563;
-}
-
-/* Dark Theme Color Variables */
-[data-theme="dark"] {
     --primary-color: #60a5fa;
     --primary-hover: #93c5fd;
     --text-color: #f3f4f6;
@@ -96,25 +75,6 @@ nav {
 
 .nav-links a:hover {
     color: var(--primary-color);
-}
-
-/* Theme Switcher Button */
-.theme-toggle-btn {
-    background: none;
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
-    padding: 0.4rem 0.8rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    transition: all 0.2s ease;
-}
-
-.theme-toggle-btn:hover {
-    border-color: var(--primary-color);
 }
 
 main {
