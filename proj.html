@@ -127,7 +127,7 @@
             color: var(--primary-color);
         }
 
-        .filter-btn.active {
+        .filter-btn.idea {
             background: var(--primary-color);
             border-color: var(--primary-color);
             color: #ffffff;
@@ -149,6 +149,7 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
             margin-bottom: 3rem;
+            max-width: 100%;
         }
 
         /* Adapt Article Card for Projects */
@@ -163,7 +164,23 @@
             flex-direction: column;
             transition: transform 0.25 ease, border-color 0.25s ease, box-shadow 0.25s ease, opacity 0.3s ease;
             position: relative;
+            width: 100%;
+            max-width: none;
         }
+
+        /* Responsive overrides for smaller screens */
+        @media (max-width: 960px) {
+            .articles-container {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .articles-container {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
 
         .article-card:hover {
             border-color: var(--primary-color);
@@ -215,9 +232,9 @@
             color: var(--status-inprogress-text);
         }
 
-        .status-active {
-            background-color: var(--status-active-bg);
-            color: var(--status-active-text);
+        .status-idea {
+            background-color: var(--status-idea-bg);
+            color: var(--status-idea-text);
         }
 
         .status-archived {
@@ -436,7 +453,7 @@
                 category: "Hardware",
                 tags: ["CAD", "3D Printing", "Design"],
                 date: "2026-10-10",
-                status: "Completed", // Status options: Active, Completed, In Progress, Archived
+                status: "Completed", // Status options: Idea, Completed, In Progress, Archived
                 image: "Articles/001_Ergonomic_Pen/Media/cover.jpeg",
                 link: "article-viewer.html?file=Articles/001_Ergonomic_Pen/Ergonomic_Pen.md"
             },
@@ -447,7 +464,7 @@
                 category: "Concept",
                 tags: ["Design", "Clock"],
                 date: "2026-10-21",
-                status: "In Progress", // Status options: Active, Completed, In Progress, Archived
+                status: "In Progress", // Status options: Idea, Completed, In Progress, Archived
                 image: "Articles/002_Infinity_Clock/Media/cover.jpeg",
                 link: "article-viewer.html?file=Articles/002_Infinity_Clock/Infinity_Clock.md"
             },
@@ -471,7 +488,7 @@
             switch (status.toLowerCase()) {
                 case 'completed': return 'status-completed';
                 case 'in progress': return 'status-in-progress';
-                case 'active': return 'status-active';
+                case 'idea': return 'status-idea';
                 case 'archived': return 'status-archived';
                 default: return 'status-archived';
             }
@@ -508,7 +525,7 @@
                 } else if (currentSort === "title-asc") {
                     return a.title.localeCompare(b.title);
                 } else if (currentSort === "status") {
-                    const priority = { "Active": 1, "In Progress": 2, "Completed": 3, "Archived": 4 };
+                    const priority = { "Idea": 3, "In Progress": 2, "Completed": 1, "Archived": 4 };
                     return (priority[a.status] || 99) - (priority[b.status] || 99);
                 }
                 return 0;
@@ -563,7 +580,7 @@
             sortSelect.value = "date-desc";
 
             Array.from(filterPills.children).forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.category === "All");
+                btn.classList.toggle('idea', btn.dataset.category === "All");
             });
 
             renderProjects();
@@ -586,8 +603,8 @@
             const button = e.target.closest('.filter-btn');
             if (!button) return;
 
-            Array.from(filterPills.children).forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+            Array.from(filterPills.children).forEach(btn => btn.classList.remove('idea'));
+            button.classList.add('idea');
 
             currentCategory = button.dataset.category;
             renderProjects();
