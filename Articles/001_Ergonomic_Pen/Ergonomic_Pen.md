@@ -49,6 +49,7 @@ This mechanism already is implemented in the "front" since one of the halves tha
 The Bolt Action pen has a mechanism which I have only seen online. The tip is extended by pushing down a pin in an "L" shaped channel and turning to the side to lock it in place.
 
 I realized that I could translated this mechanisms to the front of the pen due to the geometry of the ink cartridges that I was planning to use. These had two "wings" close to the tip for the spring to press on. I realized that I could use a hollow plunger to press on the "wings" from the top to extend the tip. This would make an ergonomic placement possible.
+
 <img src="https://edwasa.github.io/Articles/001_Ergonomic_Pen/Media/wings+spring.jpeg" style="width: 30%">
 
 Bolt action mechanisms do have the potential issue of retracting accidentally during use. That is why sometimes the channel is Shaped like a "J", which makes retraction more inconvenience since the user needs to push the ink further in to be able to turn it and disengage it. This ended up having a a nice solution in my design.
