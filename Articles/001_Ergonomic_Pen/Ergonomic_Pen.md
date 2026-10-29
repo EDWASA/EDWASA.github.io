@@ -50,7 +50,7 @@ The Bolt Action pen has a mechanism which I have only seen online. The tip is ex
 
 I realized that I could translated this mechanisms to the front of the pen due to the geometry of the ink cartridges that I was planning to use. These had two "wings" close to the tip for the spring to press on. I realized that I could use a hollow plunger to press on the "wings" from the top to extend the tip. This would make an ergonomic placement possible.
 
-<img src="https://edwasa.github.io/Articles/001_Ergonomic_Pen/Media/wings+spring.jpeg" style="width: 30%">
+<img src="https://edwasa.github.io/Articles/001_Ergonomic_Pen/Media/wings+spring.jpeg" style="width: 200px">
 
 Bolt action mechanisms do have the potential issue of retracting accidentally during use. That is why sometimes the channel is Shaped like a "J", which makes retraction more inconvenience since the user needs to push the ink further in to be able to turn it and disengage it. This ended up having a a nice solution in my design.
 ### Other options?
@@ -127,6 +127,9 @@ We have taken a very close look at all elements of Version one, the key takeaway
 # Version 2 (October 2026)
 Version 2 was amazing, most of the issues of Version 1 were fixed and the current flaws are small enough that I am willing to call the project complete. 
 But let us go over what these changes are and what new areas of improvement are.
+
+<img src="https://edwasa.github.io/Articles/001_Ergonomic_Pen/Media/screw.jpeg" style="width: 200px">
+
 ## The tip
 In order to make the screw thread properly I scaled the barrel up by 10% in the x and y axis (note not the z axis since this would mess with the thread spacing). This simple fix solved all of my issues with the thread in the first version.
 The scaling lead to an awkward step between the tip and the barrel (because they where no longer the same diameter), hence I made the tip larger by 10% without affecting the screw part.
