@@ -20,10 +20,9 @@
     }
 </style>
 
-Article written by Eduard Wagener
-
+Article written by Eduard Wagener <br>
 15th of October 2026
-
+---
 <div class="content-wrapper">
   <div class="main-content">
     <h1>Index</h1>
@@ -39,17 +38,14 @@ Article written by Eduard Wagener
     <img src="https://edwasa.github.io/Articles/001_Ergonomic_Pen/Media/cover.jpeg" style="width: 100%">
   </div>
 </div>
-
 # Introduction
 ## The idea
-I recently came across a mechanical pencil which had the button to extend the mine closer to the tip instead of the end, a place which was a lot more convenient to reach during writing without the need of regripping the pen.
-
+I recently came across a mechanical pencil which had the button to extend the mine closer to the tip instead of the end, a place which was a lot more convenient to reach during writing without the need of regripping the pen. <br>
 I am not personally a big Fan of mechanical pencils, but this design element resonated with me and I want a similar mechanism for a ball point pen. 
 Since I have not been able to find any ballpoint pen with a similar design, which is why I have decided to make my own.
 ## Why are there no such pens?
 The mechanical pencil has the unique flaw of the user needing to "refill" the tip as it wears down, thus during extended writing sessions constant regripping is needed to refill the tip.
-This is not a problem when using ball point pens, since once you have engaged the tip the user does not need to interact with the main mechanism until they are done.
-
+This is not a problem when using ball point pens, since once you have engaged the tip the user does not need to interact with the main mechanism until they are done. <br>
 So why should the manufacturer bother designing a whole new mechanism that will not significantly contribute to the user experience?
 This is why I think there are no such ball point pens. Although it is a reasonable explanation it will not stop me from designing my own ergonomic and retractable ball point pen.
 # Design Process
@@ -71,8 +67,7 @@ Having a screwdriver in a pen sounds just like the type of unnecessary but oddly
 ## Research
 First I did some research about existing mechanisms to see if I could adapt any of them to fit my design Goals. During this research I came across 3 main mechanisms.
 ### 1. Clicky button
-The Clicky button is the most common mechanism I have encountered, it consists of a button at the very end of the pen that when pressed spins a notched plastic piece into a shallow grove and can thus not fully retract. When pressing the button again the plastic pieces spins further into a deeper grove allowing it to fully retract.
-
+The Clicky button is the most common mechanism I have encountered, it consists of a button at the very end of the pen that when pressed spins a notched plastic piece into a shallow grove and can thus not fully retract. When pressing the button again the plastic pieces spins further into a deeper grove allowing it to fully retract. <br>
 Although this is a very elegant mechanism it is not clear to me whether it can be moved to somewhere else in the pen. 
 For further details on this mechanism check this youtube video: https://youtu.be/Zv5Qa2kGL04?si=GeoqBJl5t0IR3pbY
 ### 2. Turning cap
@@ -116,8 +111,7 @@ I considered changing the plunger design to cover this hole, but this would only
 ### The Geometry
 The Barrel of the pen was a smooth cylinder, that made the pen a tad slippery which would be a problem during long sessions.
 In order to prevent this I added two groves that traveled along the length of the Pen. These where not great, since I did not make then long enough for the user to interact with them whilst writing defeating the purpose of adding them in the first place.
-In the next version I will try new geometries that are more comfortable to grip.
-
+In the next version I will try new geometries that are more comfortable to grip. <br>
 Alternatively CNC Kitchen has made a program called [Bump mesh](https://bumpmesh.com/) that allows you to add textures to your 3D prints. I will experiment with these textures to add grip.
 ### The Color
 I have printed the first version out of some white PLA, because it was the material I had immediately available. But after using it for a few days I noticed some ink stains on the pen from not fully dried ink. For my personal version I do not care about this but for the final product I should consider other colors to hide/prevent this issue.
@@ -179,8 +173,7 @@ I have been carrying this pen on my back pocket for a few weeks, during which I 
 ## The Butt
 As discussed in the first version I have decided to remove the screwdriver bit for good.
 
-As for the clip I bought thicker and stronger wire and it has given better results. The wire might be a bit thin since it can still deform when opening the clip further than 90 degrees, but this is already further than commercially available pens.
-
+As for the clip I bought thicker and stronger wire and it has given better results. The wire might be a bit thin since it can still deform when opening the clip further than 90 degrees, but this is already further than commercially available pens. <br>
 Making the wire straight was difficult at first, but I have found this jewelers trick to make wire straight. It consists of holding the wire with a towel and puling the wire between your fingers at a 90 degree angle. If you repeat this process enough times and change the direction of the bend each time the wire will become straight.
 # Conclusion
 I am very happy with the resulting product and I have been using it on a daily basis for the past few weeks. It brings me joy to use it since it really is much more ergonomic than normal ballpoint pens.
