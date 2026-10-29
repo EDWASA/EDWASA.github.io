@@ -22,7 +22,6 @@
 
 Article written by Eduard Wagener <br>
 15th of October 2026
----
 <div class="content-wrapper">
   <div class="main-content">
     <h1>Index</h1>
@@ -38,6 +37,7 @@ Article written by Eduard Wagener <br>
     <img src="https://edwasa.github.io/Articles/001_Ergonomic_Pen/Media/cover.jpeg" style="width: 100%">
   </div>
 </div>
+
 # Introduction
 ## The idea
 I recently came across a mechanical pencil which had the button to extend the mine closer to the tip instead of the end, a place which was a lot more convenient to reach during writing without the need of regripping the pen. <br>
