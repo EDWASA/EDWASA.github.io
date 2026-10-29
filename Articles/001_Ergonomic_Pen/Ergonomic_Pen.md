@@ -1,17 +1,42 @@
+<style>
+    .content-wrapper {
+        display: flex;
+        flex-direction: column; /* Stack columns on mobile */
+        gap: 2rem;
+    }
+
+    .main-content {
+        flex: 3;
+    }
+
+    .sidebar-block {
+        flex: 1;
+    }
+
+    @media screen and (min-width: 768px) {
+        .content-wrapper {
+            flex-direction: row; /* Place columns side-by-side on PC */
+        }
+    }
+</style>
+
 Article written by Eduard Wagener
 
 15th of October 2026
 
-<div style="display: flex; justify-content: center;">
-  <img src="https://edwasa.github.io/Articles/001_Ergonomic_Pen/Media/cover.jpeg" style="width: 350px">
-</div>
+<div class="content-wrapper">
+  <div class="main-content">
+    # Index
+    - [Introduction](#introduction)
+    - [Design Process](#design-process)
+    - [Version 1](#version-1)
+    - [Version 2](#version-2)
+    - [Conclusion](#conclusion)
+  </div>
+  <div class="sidebar-block">
+    <img src="https://edwasa.github.io/Articles/001_Ergonomic_Pen/Media/cover.jpeg" style="width: 100%">
+  </div>
 
-# Index
-- [Introduction](#introduction)
-- [Design Process](#design-process)
-- [Version 1](#version-1)
-- [Version 2](#version-2)
-- [Conclusion](#conclusion)
 # Introduction
 ## The idea
 I recently came across a mechanical pencil which had the button to extend the mine closer to the tip instead of the end, a place which was a lot more convenient to reach during writing without the need of regripping the pen.
