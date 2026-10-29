@@ -26,12 +26,16 @@ Article written by Eduard Wagener
 
 <div class="content-wrapper">
   <div class="main-content">
-    # Index
-    - [Introduction](#introduction)
-    - [Design Process](#design-process)
-    - [Version 1](#version-1-september-2026)
-    - [Version 2](#version-2-october-2026)
-    - [Conclusion](#conclusion)
+    <h1>Index</h1>
+    <div>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#design-process">Design Process</a></li>
+        <li><a href="#version-1-september-2026">Version 1</a></li>
+        <li><a href="#version-2-october-2026">Version 2</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </div>
   </div>
   <div class="sidebar-block">
     <img src="https://edwasa.github.io/Articles/001_Ergonomic_Pen/Media/cover.jpeg" style="width: 100%">
