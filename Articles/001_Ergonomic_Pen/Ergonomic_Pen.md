@@ -29,13 +29,14 @@ Article written by Eduard Wagener
     # Index
     - [Introduction](#introduction)
     - [Design Process](#design-process)
-    - [Version 1](#version-1)
-    - [Version 2](#version-2)
+    - [Version 1](#version-1-september-2026)
+    - [Version 2](#version-2-october-2026)
     - [Conclusion](#conclusion)
   </div>
   <div class="sidebar-block">
     <img src="https://edwasa.github.io/Articles/001_Ergonomic_Pen/Media/cover.jpeg" style="width: 100%">
   </div>
+</div>
 
 # Introduction
 ## The idea
