@@ -27,7 +27,6 @@ Article written by Eduard Wagener
 <div class="content-wrapper">
   <div class="main-content">
     <h1>Index</h1>
-    <div>
       <ul>
         <li><a href="#introduction">Introduction</a></li>
         <li><a href="#design-process">Design Process</a></li>
@@ -35,7 +34,6 @@ Article written by Eduard Wagener
         <li><a href="#version-2-october-2026">Version 2</a></li>
         <li><a href="#conclusion">Conclusion</a></li>
       </ul>
-    </div>
   </div>
   <div class="sidebar-block">
     <img src="https://edwasa.github.io/Articles/001_Ergonomic_Pen/Media/cover.jpeg" style="width: 100%">
@@ -192,14 +190,5 @@ The issues from V2 are small enough that they do not bother me, but in case of m
 I will be uploading the files to printables and maker world in case you want to make your own ergonomic bolt action pen. As additional materials you will need an ink cartridge with the wings, a pen spring and an M2 bolt for the pin.
 
 ---
-Article by Eduard Wagener
-
+Article by Eduard Wagener <br>
 15th of October 2026
-# Links
-- Inspiration pen in maker world --> https://makerworld.com/models/1440290?appSharePlatform=copy
-- Video about retractable mechanism --> https://youtu.be/Zv5Qa2kGL04?si=GeoqBJl5t0IR3pbY
-- Scott Russel linkage --> https://en.wikipedia.org/wiki/Scott_Russell_linkage
-- Printables --> TBD
-- Maker world --> TBD
-- Bump mesh --> https://bumpmesh.com/
-- Craighill video --> https://youtu.be/bFDt3lUzVPc?si=h_SgnaeWsf3YL5ZR
