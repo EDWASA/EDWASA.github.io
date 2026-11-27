@@ -12,6 +12,7 @@ I used the plotter at my local makerspace to cut some textile adhesive paper int
 	<img src="https://edwasa.github.io/Articles/003_Custom_Hoodie/Media/front01.jpeg" style="width: 350px">
 	<figcaption>Front design</figcaption>
 </figure>
+
 # Improvements
 - If I would do this process again I would definitely avoid having such an intricate design with many thin lines. These made the process of removing the negative be very finicky and take a lot longer than expected.
 <img src="https://edwasa.github.io/Articles/003_Custom_Hoodie/Media/work_in_progress.jpg" style="width: 350px">
