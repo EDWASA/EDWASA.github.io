@@ -15,4 +15,4 @@ I used the plotter at my local makerspace to cut some textile adhesive paper int
 # Improvements
 - If I would do this process again I would definitely avoid having such an intricate design with many thin lines. These made the process of removing the negative be very finicky and take a lot longer than expected.
 <img src="https://edwasa.github.io/Articles/003_Custom_Hoodie/Media/work_in_progress.jpg" style="width: 350px">
-- Additionally I forgot to flip the design before cutting it out in the plotter. Luckily all of the designs are symmetric and the only effect that it has is in the ordering.
+- Additionally I forgot to flip the design before cutting it out in the plotter. Luckily all of the designs are symmetric and the only effect that it has is in the ordering.t 
